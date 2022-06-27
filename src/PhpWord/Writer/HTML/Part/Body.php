@@ -45,13 +45,13 @@ class Body extends AbstractPart
         $footers = $section->getFooters();
         
         foreach ($sections as $x => $section) {
-            if(isset($headers[$x]) {
+            if(isset($headers[$x])) {
                 $writer = new Container($this->getParentWriter(), $headers[$x]);
                 $content .= $writer->write();
             }
             $writer = new Container($this->getParentWriter(), $section);
             $content .= $writer->write();
-            if(isset($footers[$x]) {
+            if(isset($footers[$x])) {
                 $writer = new Container($this->getParentWriter(), $footers[$x]);
                 $content .= $writer->write();
             }
